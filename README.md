@@ -176,7 +176,7 @@ NODE_ENV=development
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/slack-ai-member-agent.git
+git clone https://github.com/kisinja/Slack-AI-Agent.git
 cd slack-ai-member-agent
 ```
 
