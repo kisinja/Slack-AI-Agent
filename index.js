@@ -7,6 +7,8 @@ import express from "express";
 import dotenv from "dotenv";
 import axios from "axios";
 
+import {initDatabase, saveMemberAnalysis, closeDatabase,markAsSentToSlack} from './db.js';
+
 dotenv.config();
 
 const log = {
@@ -128,7 +130,7 @@ class SlackAIAgent {
       const analysis = await this.analyzeWithAI(memberInfo, researchData);
       log.info(`Saving analysis to database for ${memberInfo.name}`);
 
-      analysisId = await saveMemeberAnalysis(
+      analysisId = await saveMemberAnalysis(
         memberInfo,
         analysis,
         researchData,
